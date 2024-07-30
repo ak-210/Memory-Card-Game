@@ -33,35 +33,37 @@ class _CardTileV2State extends State<CardTileV2> {
       final selected = ref.watch(selectionsProvider).contains(card);
       return FlipCard(
         controller: _controller,
-        front: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              // colors: [
-              //   Colors.white,
-              //   Color.fromARGB(255, 137, 160, 171),
-              //   Colors.white,
-              // ],
-              colors: [
-                Colors.brown[400]!,
-                Colors.brown[700]!,
-                Colors.brown[400]!,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(5),
-            border: Border.all(
-              color: const Color.fromARGB(184, 161, 136, 127),
-              width: 5,
-            ),
-          ),
-          child: Center(
-            child: Icon(
-              !card.discarded ? card.icon : Icons.done,
-              color: Colors.brown[100]!,
-            ),
-          ),
-        ),
+        front: !card.discarded
+            ? Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    // colors: [
+                    //   Colors.white,
+                    //   Color.fromARGB(255, 137, 160, 171),
+                    //   Colors.white,
+                    // ],
+                    colors: [
+                      Colors.brown[400]!,
+                      Colors.brown[700]!,
+                      Colors.brown[400]!,
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(
+                    color: const Color.fromARGB(184, 161, 136, 127),
+                    width: 5,
+                  ),
+                ),
+                child: Center(
+                  child: Icon(
+                    card.icon,
+                    color: Colors.brown[100]!,
+                  ),
+                ),
+              )
+            : Container(),
         back: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_demo/screens/game_screen.dart';
 import 'package:riverpod_demo/screens/home_screen.dart';
 
 void main() {
@@ -43,8 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
               fit: BoxFit.fill,
             ),
           ),
-          // child: const HomeScreen(),
-          child: const GameScreen(),
+          child: const HomeScreen(),
         ),
       ),
     );

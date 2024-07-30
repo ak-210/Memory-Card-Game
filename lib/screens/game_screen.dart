@@ -7,15 +7,28 @@ class GameScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        ScoreBoard(),
-        Expanded(
-          child: Center(
-            child: GameBoard(),
+    return SafeArea(
+      minimum: const EdgeInsets.only(top: 30),
+      child: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images.jpeg'),
+              fit: BoxFit.fill,
+            ),
+          ),
+          child: const Column(
+            children: [
+              ScoreBoard(),
+              Expanded(
+                child: Center(
+                  child: GameBoard(),
+                ),
+              ),
+            ],
           ),
         ),
-      ],
+      ),
     );
   }
 }

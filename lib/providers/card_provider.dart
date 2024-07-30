@@ -4,7 +4,7 @@ import 'package:riverpod_demo/models/card_model.dart';
 import 'package:riverpod_demo/providers/no_of_cards_provider.dart';
 
 final cardProvider = Provider<List<CardModel>>((ref) {
-  final int num = ref.read(noOfCardsProvider);
+  final int num = ref.watch(noOfCardsProvider);
   List<CardModel> cards = [];
 
   List<IconData> icon = [
