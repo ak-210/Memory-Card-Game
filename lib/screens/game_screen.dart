@@ -7,26 +7,15 @@ class GameScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.cyan[700]!, Colors.cyan[300]!, Colors.cyan[700]!],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          // radius: double.infinity,
-        ),
-      ),
-      child: const Column(
-        children: [
-          // const SizedBox(height: 10),
-          ScoreBoard(),
-          Expanded(
-            child: Center(
-              child: GameBoard(),
-            ),
+    return const Column(
+      children: [
+        ScoreBoard(),
+        Expanded(
+          child: Center(
+            child: GameBoard(),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

@@ -38,7 +38,7 @@ class GameBoard extends ConsumerWidget {
             crossAxisCount: 5,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
-            childAspectRatio: 0.8,
+            // childAspectRatio: 0.8,
             padding: const EdgeInsets.all(20),
             shrinkWrap: true,
             children: List.generate(

@@ -35,43 +35,56 @@ class _CardTileV2State extends State<CardTileV2> {
         controller: _controller,
         front: Container(
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
+              // colors: [
+              //   Colors.white,
+              //   Color.fromARGB(255, 137, 160, 171),
+              //   Colors.white,
+              // ],
               colors: [
-                Colors.white,
-                Color.fromARGB(255, 137, 160, 171),
-                Colors.white,
+                Colors.brown[400]!,
+                Colors.brown[700]!,
+                Colors.brown[400]!,
               ],
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
             borderRadius: BorderRadius.circular(5),
-            // border: Border.all(
-            //   color: const Color.fromARGB(148, 80, 80, 80),
-            //   width: 5,
-            // ),
+            border: Border.all(
+              color: const Color.fromARGB(184, 161, 136, 127),
+              width: 5,
+            ),
           ),
           child: Center(
-            child: Icon(!card.discarded ? card.icon : Icons.done),
+            child: Icon(
+              !card.discarded ? card.icon : Icons.done,
+              color: Colors.brown[100]!,
+            ),
           ),
         ),
         back: Container(
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Colors.blueGrey, Colors.white, Colors.blueGrey],
+            gradient: LinearGradient(
+              // colors: [Colors.blueGrey, Colors.white, Colors.blueGrey],
+              colors: [
+                Colors.brown[600]!,
+                Colors.brown[300]!,
+                Colors.brown[600]!,
+              ],
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
             ),
             // color: Colors.orange[200],
             borderRadius: BorderRadius.circular(5),
             border: Border.all(
-              color: const Color.fromARGB(148, 80, 80, 80),
+              color: const Color.fromARGB(179, 29, 19, 17),
               width: 5,
             ),
           ),
-          child: const Center(
+          child: Center(
             child: Icon(
               Icons.question_mark,
-              // color: Colors.orange[700],
+              color: Colors.brown[800]!,
             ),
           ),
         ),

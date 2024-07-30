@@ -24,6 +24,11 @@ class ScoreBoard extends StatelessWidget {
           children: List.generate(
             players.length,
             (index) => Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(width: 2.5),
+              ),
+              child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: players[index].playerColor,
@@ -32,7 +37,18 @@ class ScoreBoard extends StatelessWidget {
                     width: 10,
                   ),
                 ),
-                child: Center(child: Text(players[index].points.toString()))),
+                child: Center(
+                  child: Text(
+                    players[index].points.toString(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         );
       },

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_demo/screens/game_screen.dart';
+import 'package:riverpod_demo/screens/home_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -32,12 +33,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+    return SafeArea(
+      minimum: const EdgeInsets.only(top: 30),
+      child: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images.jpeg'),
+              fit: BoxFit.fill,
+            ),
+          ),
+          // child: const HomeScreen(),
+          child: const GameScreen(),
+        ),
       ),
-      body: const GameScreen(),
     );
   }
 }

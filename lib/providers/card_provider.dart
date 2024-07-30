@@ -18,6 +18,11 @@ final cardProvider = Provider<List<CardModel>>((ref) {
     Icons.emoji_emotions,
     Icons.face_6,
     Icons.apple,
+    Icons.filter_hdr_rounded,
+    Icons.directions_bike_rounded,
+    Icons.brush,
+    Icons.music_note,
+    Icons.settings,
   ];
 
   for (int i = 0; i < num; i++) {
