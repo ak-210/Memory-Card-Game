@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_demo/providers/difficulty_provider.dart';
-import 'package:riverpod_demo/screens/kanit_text.dart';
+import 'package:memory_card_game/providers/difficulty_provider.dart';
+import 'package:memory_card_game/screens/kanit_text.dart';
 
 class DifficultyDropdown extends ConsumerWidget {
   const DifficultyDropdown({super.key});

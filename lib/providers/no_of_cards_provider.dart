@@ -1,5 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_demo/providers/difficulty_provider.dart';
+import 'package:memory_card_game/providers/difficulty_provider.dart';
 
 final noOfCardsProvider = Provider((ref) {
   final diff = ref.watch(difficultyProvider);

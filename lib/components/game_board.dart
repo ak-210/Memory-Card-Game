@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-// import 'package:riverpod_demo/components/card_tile.dart';
-import 'package:riverpod_demo/components/card_tile_v2.dart';
-import 'package:riverpod_demo/models/player_model.dart';
-import 'package:riverpod_demo/providers/card_provider.dart';
-import 'package:riverpod_demo/providers/difficulty_provider.dart';
-import 'package:riverpod_demo/providers/no_of_cards_provider.dart';
-import 'package:riverpod_demo/providers/player_provider.dart';
+// import 'package:memory_card_game/components/card_tile.dart';
+import 'package:memory_card_game/components/card_tile_v2.dart';
+import 'package:memory_card_game/models/player_model.dart';
+import 'package:memory_card_game/providers/card_provider.dart';
+// import 'package:memory_card_game/providers/difficulty_provider.dart';
+import 'package:memory_card_game/providers/no_of_cards_provider.dart';
+import 'package:memory_card_game/providers/player_provider.dart';
+import 'package:memory_card_game/services/get_size.dart';
 
 class GameBoard extends ConsumerWidget {
   const GameBoard({super.key});
@@ -25,18 +26,6 @@ class GameBoard extends ConsumerWidget {
     return winners;
   }
 
-  int axisCount(WidgetRef ref) {
-    final diff = ref.watch(difficultyProvider);
-    switch (diff) {
-      case (Difficulty.EASY):
-        return 3;
-      case (Difficulty.MEDIUM):
-        return 4;
-      case (Difficulty.HARD):
-        return 5;
-    }
-  }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final cards = ref.read(cardProvider);
@@ -48,9 +37,9 @@ class GameBoard extends ConsumerWidget {
 
     return !completed
         ? GridView.count(
-            crossAxisCount: axisCount(ref),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
+            crossAxisCount: axisCount,
+            crossAxisSpacing: spacing,
+            mainAxisSpacing: spacing,
             padding: const EdgeInsets.all(20),
             shrinkWrap: true,
             children: List.generate(

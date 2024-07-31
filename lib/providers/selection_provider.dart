@@ -1,5 +1,5 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_demo/models/card_model.dart';
+import 'package:memory_card_game/models/card_model.dart';
 
 part 'selection_provider.g.dart';
 

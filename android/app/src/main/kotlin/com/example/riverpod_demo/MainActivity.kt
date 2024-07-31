@@ -1,4 +1,4 @@
-package com.example.riverpod_demo
+package com.example.memory_card_game
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:memory_card_game/screens/kanit_text.dart';
 
 class HomeButton extends StatelessWidget {
   final String text;
   final void Function() onPressed;
-  const HomeButton({super.key, required this.text, required this.onPressed});
+  final IconData icon;
+  const HomeButton({super.key, required this.text, required this.onPressed, required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        // shadowColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
         backgroundColor: Colors.brown[400],
         foregroundColor: const Color(0xffffffff),
-        // padding: const EdgeInsets.all(30),
         shape: RoundedRectangleBorder(
             side: BorderSide(
               color: Colors.brown[700]!,
@@ -27,9 +27,11 @@ class HomeButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.supervised_user_circle_sharp),
+            Icon(icon, size: 24),
+            const SizedBox(width: 10),
             Text(
-              text,
+              '$text Players',
+              style: kanitTextStyle(size: 18, letterSpacing: 1.5),
             ),
           ],
         ),

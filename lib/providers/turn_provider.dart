@@ -1,9 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_demo/models/player_model.dart';
-import 'package:riverpod_demo/providers/flipped_cards.dart';
-import 'package:riverpod_demo/providers/no_of_cards_provider.dart';
-import 'package:riverpod_demo/providers/player_provider.dart';
-import 'package:riverpod_demo/providers/selection_provider.dart';
+import 'package:memory_card_game/models/player_model.dart';
+import 'package:memory_card_game/providers/flipped_cards.dart';
+import 'package:memory_card_game/providers/no_of_cards_provider.dart';
+import 'package:memory_card_game/providers/player_provider.dart';
+import 'package:memory_card_game/providers/selection_provider.dart';
 
 part 'turn_provider.g.dart';
 

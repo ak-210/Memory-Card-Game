@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_demo/screens/home_screen.dart';
+import 'package:memory_card_game/screens/home_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -32,18 +32,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      minimum: const EdgeInsets.only(top: 30),
-      child: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images.jpeg'),
-              fit: BoxFit.fill,
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images.jpeg'),
+            fit: BoxFit.fill,
           ),
-          child: const HomeScreen(),
         ),
+        child: const SafeArea(child: HomeScreen()),
       ),
     );
   }

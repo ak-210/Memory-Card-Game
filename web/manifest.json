@@ -1,6 +1,6 @@
 {
-    "name": "riverpod_demo",
-    "short_name": "riverpod_demo",
+    "name": "memory_card_game",
+    "short_name": "memory_card_game",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

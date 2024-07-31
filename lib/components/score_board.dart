@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_demo/providers/no_of_cards_provider.dart';
-import 'package:riverpod_demo/providers/player_provider.dart';
-import 'package:riverpod_demo/providers/turn_provider.dart';
+import 'package:memory_card_game/providers/no_of_cards_provider.dart';
+import 'package:memory_card_game/providers/player_provider.dart';
+import 'package:memory_card_game/providers/turn_provider.dart';
 
 class ScoreBoard extends StatelessWidget {
   const ScoreBoard({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_demo/models/player_model.dart';
+import 'package:memory_card_game/models/player_model.dart';
 
 final players = [
   PlayerModel(0, Colors.red, 'Red'),
